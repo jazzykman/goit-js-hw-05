@@ -1,5 +1,5 @@
 const getUsersWithFriend = (users, friendName) => {
-  // Твой код здесь
+  return users.filter(user => user.friends.includes(friendName));
 };
 
 // Проверка с исходным массивом
@@ -35,5 +35,10 @@ const allUsers = [
 ];
 
 console.log(getUsersWithFriend(allUsers, "Briana Decker")); 
-console.log(getUsersWithFriend(allUsers, "Goldie Gentry"));
-console.log(getUsersWithFriend(allUsers, "Adrian Cross"));
+// Ожидаемый результат: ["Sharlene Bush", "Sheree Anthony"]
+
+console.log(getUsersWithFriend(allUsers, "Goldie Gentry")); 
+// Ожидаемый результат: ["Elma Head", "Sheree Anthony"]
+
+console.log(getUsersWithFriend(allUsers, "Adrian Cross")); 
+// Ожидаемый результат: []
